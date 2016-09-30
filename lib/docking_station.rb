@@ -1,13 +1,9 @@
-require_relative 'bike'
-
 class DockingStation
 attr_reader :bikes
-attr_accessor :capacity
 DEFAULT_CAPACITY = 20
 
-  def initialize(capacity=DEFAULT_CAPACITY)
+  def initialize
     @bikes = []
-    @capacity = capacity
   end
 
   def release_bike
@@ -31,4 +27,7 @@ DEFAULT_CAPACITY = 20
     return true if @bikes.empty?
   end
 
+  def report
+    return false if !bike.working?
+  end
 end

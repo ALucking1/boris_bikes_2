@@ -9,6 +9,10 @@ describe DockingStation do
     boris = Bike.new
     expect(boris.working?).to eq true
   end
+  it 'is broken?' do
+    bike = Bike.new
+    expect(!bike.working?).to eq false
+  end
   it 'docks a bike' do
     expect(docking_station).to respond_to(:dock).with(1).argument
   end
@@ -42,5 +46,11 @@ describe 'default capacity' do
   docking_station = DockingStation.new
   it "gives default capacity" do
     expect(docking_station.capacity).to eq DEFAULT_CAPACITY
+  end
+end
+describe 'is bike broken' do
+  bike = Bike.new
+  it 'shows if bike is broken' do
+    expect()
   end
 end
