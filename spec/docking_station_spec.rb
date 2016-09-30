@@ -44,8 +44,3 @@ describe 'default capacity' do
     expect(docking_station.capacity).to eq DEFAULT_CAPACITY
   end
 end
-# describe '' do
-#   it '' do
-#     expect rgsggs.to eq (:capacity)
-#   end
-# end
